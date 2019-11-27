@@ -1,17 +1,22 @@
-from simpleclmenu.menu import get_choice_from_cli
+from menu import get_choice_from_cli
 
 
 if __name__ == "__main__":
     """ Example usage:
     """
+    def client_run():
+        print("Client run")
 
-    # noinspection PyListCreation
-    options = [
-        (1, "Option 1", "Some object"),
-        (2, "Option 2", "another object"),
-        ("text", "It even works for methods", get_choice_from_cli),
-        ("q", "And numbers", 123),
-        ("What an incredibly long example right here. Wow.  ", "Look how it is all lined up neatly!", 123),
-    ]
-    print(get_choice_from_cli(options))
+    def server_run():
+        print("Server run")
+
+    import sys
+
+    choice = get_choice_from_cli([
+        (1, "Run as Client", client_run),
+        (2, "Run as Server", server_run),
+        ('q', "Quit", sys.exit),
+    ])
+
+    choice()
 
