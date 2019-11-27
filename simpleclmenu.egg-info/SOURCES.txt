@@ -1,0 +1,8 @@
+README.md
+setup.py
+simpleclmenu/__init__.py
+simpleclmenu/menu.py
+simpleclmenu.egg-info/PKG-INFO
+simpleclmenu.egg-info/SOURCES.txt
+simpleclmenu.egg-info/dependency_links.txt
+simpleclmenu.egg-info/top_level.txt
